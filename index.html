@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Ricardo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Surpresa para Ricardo</h1>
+        <p>Responda todas as perguntas corretamente para ter acesso à carta especial.</p>
+        <div id="quiz">
+            <div class="question">
+                <p>1. Qual foi o dia do nosso primeiro encontro?</p>
+                <input type="text" id="q1">
+            </div>
+            <div class="question">
+                <p>2. Qual a cor do vestido que usei no nosso primeiro encontro?</p>
+                <input type="text" id="q2">
+            </div>
+            <div class="question">
+                <p>3. Onde nos encontramos no nosso primeiro encontro?</p>
+                <input type="text" id="q3">
+            </div>
+            <button onclick="checkAnswers()">Enviar Respostas</button>
+        </div>
+        <div id="message" class="hidden">
+            <p>Parabéns! Aqui está sua carta:</p>
+            <div id="letter">
+                <p>No dia do nosso primeiro encontro, eu tinha aula na faculdade...</p>
+                <p>Do seu amor,<br>Isadora.</p>
+            </div>
+            <button onclick="downloadPDF()">Baixar Carta em PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
